@@ -1,16 +1,14 @@
 package com.demo.numcheck;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Component;
 @Component
+@Log4j2
 public class NumChecker {
-
-    public static final Logger log = LoggerFactory.getLogger(NumChecker.class);
     private NumProcessor processor;
 
     @Autowired
@@ -21,7 +19,6 @@ public class NumChecker {
     @StreamListener(NumProcessor.IN)
     public void numSorter(Number number)
     {
-        log.info("Number {} is {}", number.getNumber(), number.getType());
         if (number.getNumber() % 2 == 0)
         {
             number.setType(NumType.EVEN.name());
@@ -31,7 +28,7 @@ public class NumChecker {
                 number.setType(NumType.ODD.name());
                 processor.oddOutput().send(message(number));
             }
-        log.info("Number {} is {}", number.getNumber(), number.getType());
+        log.info("Number {} is {}, UUID = {}", number.getNumber(), number.getType(), number.getUuid());
     }
     private static <T> Message<T> message(T val) {
         return MessageBuilder.withPayload(val).build();

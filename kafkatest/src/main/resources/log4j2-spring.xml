@@ -13,15 +13,15 @@
         </File>
     </Appenders>
     <Loggers>
-        <Logger name="com.demo.Numcheck" level="info" additivity="false">
+        <Logger name="com.demo.Kafkatest" level="info" additivity="false">
             <AppenderRef ref="FILE"/>
             <AppenderRef ref="CONSOLE"/>
         </Logger>
-        <Logger name="com.demo.Numcheck" level="warn" additivity="false">
+        <Logger name="com.demo.Kafkatest" level="warn" additivity="false">
             <AppenderRef ref="FILE"/>
             <AppenderRef ref="CONSOLE"/>
         </Logger>
-        <Logger name="org.demo.Numcheck" level="error" additivity="false">
+        <Logger name="org.demo.Kafkatest" level="error" additivity="false">
             <AppenderRef ref="FILE"/>
             <AppenderRef ref="CONSOLE"/>
         </Logger>
