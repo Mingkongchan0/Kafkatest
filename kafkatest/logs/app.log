@@ -1,0 +1,289 @@
+2020-03-19 15:49:55,667 INFO c.d.k.KafkatestApplication [main] Starting KafkatestApplication on CPX-KDTAJRHYV1S with PID 7020 (C:\Users\ming.k.chan\Documents\Kafkatest\kafkatest\target\classes started by ming.k.chan in C:\Users\ming.k.chan\Documents\Kafkatest\kafkatest)
+2020-03-19 15:49:55,672 INFO c.d.k.KafkatestApplication [main] No active profile set, falling back to default profiles: default
+2020-03-19 15:49:56,498 INFO o.s.c.a.ConfigurationClassEnhancer [main] @Bean method BinderFactoryConfiguration.implicitFunctionBinder is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2020-03-19 15:49:56,505 INFO o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-03-19 15:49:56,513 INFO o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-03-19 15:49:56,520 INFO o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor [main] No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-03-19 15:49:56,572 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$5dbfc4da] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-19 15:49:56,590 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$f4ff6e86] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-19 15:49:56,599 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration$$EnhancerBySpringCGLIB$$d09179a6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-19 15:49:56,609 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$$EnhancerBySpringCGLIB$$9792273] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-19 15:49:56,614 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-19 15:49:56,633 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-19 15:49:57,067 INFO o.s.s.c.ThreadPoolTaskScheduler [main] Initializing ExecutorService 'taskScheduler'
+2020-03-19 15:49:57,175 INFO o.s.i.m.IntegrationMBeanExporter [main] Registering MessageChannel integrationFlowCreator.channel#1
+2020-03-19 15:49:57,248 INFO o.s.i.m.IntegrationMBeanExporter [main] Registering MessageChannel integrationFlowCreator.channel#0
+2020-03-19 15:49:57,258 INFO o.s.i.m.IntegrationMBeanExporter [main] Registering MessageChannel nullChannel
+2020-03-19 15:49:57,270 INFO o.s.i.m.IntegrationMBeanExporter [main] Registering MessageChannel errorChannel
+2020-03-19 15:49:57,299 INFO o.s.i.m.IntegrationMBeanExporter [main] Registering MessageHandler errorLogger
+2020-03-19 15:49:57,313 INFO o.s.i.m.IntegrationMBeanExporter [main] Registering MessageHandler integrationFlowCreator.org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2020-03-19 15:49:57,324 INFO o.s.i.m.IntegrationMBeanExporter [main] Registering MessageSource integrationFlowCreator.org.springframework.integration.config.SourcePollingChannelAdapterFactoryBean#0
+2020-03-19 15:49:57,343 INFO o.s.i.e.EventDrivenConsumer [main] Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-03-19 15:49:57,343 INFO o.s.i.c.PublishSubscribeChannel [main] Channel 'kafkatest.errorChannel' has 1 subscriber(s).
+2020-03-19 15:49:57,344 INFO o.s.i.e.EventDrivenConsumer [main] started _org.springframework.integration.errorLogger
+2020-03-19 15:49:57,344 INFO o.s.i.e.EventDrivenConsumer [main] Adding {splitter} as a subscriber to the 'integrationFlowCreator.channel#0' channel
+2020-03-19 15:49:57,344 INFO o.s.i.c.DirectChannel [main] Channel 'kafkatest.integrationFlowCreator.channel#0' has 1 subscriber(s).
+2020-03-19 15:49:57,344 INFO o.s.i.e.EventDrivenConsumer [main] started integrationFlowCreator.org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2020-03-19 15:49:57,575 INFO o.s.c.s.b.k.p.KafkaTopicProvisioner [main] Using kafka topic for outbound: output
+2020-03-19 15:49:57,577 INFO o.a.k.c.a.AdminClientConfig [main] AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2020-03-19 15:49:57,624 INFO o.a.k.c.u.AppInfoParser [main] Kafka version : 2.0.1
+2020-03-19 15:49:57,625 INFO o.a.k.c.u.AppInfoParser [main] Kafka commitId : fa14705e51bd2ce5
+2020-03-19 15:49:57,784 INFO o.a.k.c.p.ProducerConfig [main] ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2020-03-19 15:49:57,810 INFO o.a.k.c.u.AppInfoParser [main] Kafka version : 2.0.1
+2020-03-19 15:49:57,810 INFO o.a.k.c.u.AppInfoParser [main] Kafka commitId : fa14705e51bd2ce5
+2020-03-19 15:49:57,822 INFO o.a.k.c.Metadata [kafka-producer-network-thread | producer-1] Cluster ID: VIXFTpuuSz6UUTNitd2F0w
+2020-03-19 15:49:57,826 INFO o.a.k.c.p.KafkaProducer [main] [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2020-03-19 15:49:57,835 INFO o.s.c.s.m.DirectWithAttributesChannel [main] Channel 'kafkatest.integrationFlowCreator.channel#1' has 1 subscriber(s).
+2020-03-19 15:49:57,837 INFO o.s.i.e.SourcePollingChannelAdapter [main] started integrationFlowCreator.org.springframework.integration.config.SourcePollingChannelAdapterFactoryBean#0
+2020-03-19 15:49:57,843 INFO c.d.k.KafkatestApplication [main] Started KafkatestApplication in 2.79 seconds (JVM running for 4.531)
+2020-03-19 15:49:57,850 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 80 is PENDING, UUID = f8bc8c80-6f10-4965-83b0-ab8708de6952
+2020-03-19 15:49:57,908 INFO o.a.k.c.p.ProducerConfig [task-scheduler-1] ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2020-03-19 15:49:57,913 INFO o.a.k.c.u.AppInfoParser [task-scheduler-1] Kafka version : 2.0.1
+2020-03-19 15:49:57,913 INFO o.a.k.c.u.AppInfoParser [task-scheduler-1] Kafka commitId : fa14705e51bd2ce5
+2020-03-19 15:49:57,922 INFO o.a.k.c.Metadata [kafka-producer-network-thread | producer-2] Cluster ID: VIXFTpuuSz6UUTNitd2F0w
+2020-03-19 15:49:58,936 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 77 is PENDING, UUID = 67c66753-cc8f-4097-8f3b-193b8879285b
+2020-03-19 15:49:59,938 INFO c.d.k.KafkatestApplication [task-scheduler-2] Number 61 is PENDING, UUID = 3defaf9e-91cb-43b9-a2c5-6f24f4504c0b
+2020-03-19 15:50:00,942 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 49 is PENDING, UUID = 29ae8f95-03b9-4b75-a204-a522c51cb9e2
+2020-03-19 15:50:01,944 INFO c.d.k.KafkatestApplication [task-scheduler-3] Number 52 is PENDING, UUID = 360f17ab-a940-44ae-84aa-7ba1db9ea444
+2020-03-19 15:50:02,946 INFO c.d.k.KafkatestApplication [task-scheduler-2] Number 48 is PENDING, UUID = ed7f1e2a-bca3-4b2a-9f11-10dce2a2a046
+2020-03-19 15:50:03,948 INFO c.d.k.KafkatestApplication [task-scheduler-4] Number 59 is PENDING, UUID = fc9b55e2-b842-4b86-ae89-b52fcc1fa2d9
+2020-03-19 15:50:04,950 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 10 is PENDING, UUID = b2cbdf52-8a30-416f-86d7-3fdbd48d44e8
+2020-03-19 15:50:05,953 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 52 is PENDING, UUID = 57f92f69-0342-4bc2-bb17-24bc9ce7b7be
+2020-03-19 15:50:06,956 INFO c.d.k.KafkatestApplication [task-scheduler-3] Number 15 is PENDING, UUID = ef0d032e-0b68-4af2-ad88-99207d934f05
+2020-03-19 15:50:07,958 INFO c.d.k.KafkatestApplication [task-scheduler-3] Number 29 is PENDING, UUID = 03201116-8742-424b-911c-203f9dfbb5ff
+2020-03-19 15:50:08,960 INFO c.d.k.KafkatestApplication [task-scheduler-3] Number 96 is PENDING, UUID = a4c7b684-eb77-44e4-b899-a1251e780e04
+2020-03-19 15:50:09,963 INFO c.d.k.KafkatestApplication [task-scheduler-3] Number 83 is PENDING, UUID = 4a78a00e-2e9b-4435-a0d5-30566d880610
+2020-03-19 15:50:10,966 INFO c.d.k.KafkatestApplication [task-scheduler-3] Number 13 is PENDING, UUID = 30208c28-8c89-407d-aa35-b0f46874459b
+2020-03-19 15:50:11,967 INFO c.d.k.KafkatestApplication [task-scheduler-3] Number 72 is PENDING, UUID = f28a25b2-8bc0-420e-a379-bf12f729176c
+2020-03-19 15:50:12,970 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 46 is PENDING, UUID = 44702adc-83e5-409a-a6d1-be275277667d
+2020-03-19 15:50:13,973 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 44 is PENDING, UUID = c4d42209-1647-4f02-9969-98333a363293
+2020-03-19 15:50:14,974 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 46 is PENDING, UUID = 4304f5be-8f36-44ef-86c0-2f34f3048612
+2020-03-19 15:50:15,976 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 80 is PENDING, UUID = fcdfc631-e721-40b7-93d9-00be06c2c01f
+2020-03-19 15:50:16,978 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 3 is PENDING, UUID = 97cc46ad-2a73-45d4-98d7-be745e563d96
+2020-03-19 15:50:17,980 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 15 is PENDING, UUID = 7cdb0497-51ce-4669-9456-d85cb1a6a804
+2020-03-19 15:50:18,982 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 26 is PENDING, UUID = a6fd1bd4-5076-4ae1-89cc-5d225efc1d1f
+2020-03-19 15:50:19,985 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 26 is PENDING, UUID = d7d268d4-cf9d-412f-9450-690e289aa295
+2020-03-19 15:50:20,986 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 7 is PENDING, UUID = 7a5d3a9f-c48c-46f6-a4be-106a79d6eb00
+2020-03-19 15:50:21,987 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 54 is PENDING, UUID = b95f17fc-f9cc-4ade-91c3-2ef525eba00a
+2020-03-19 15:50:22,990 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 60 is PENDING, UUID = 7200c7c1-5c57-426d-ab35-21aa114fc752
+2020-03-19 15:50:23,991 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 76 is PENDING, UUID = a5cef39e-5dcc-4a00-9b7e-2c908a374bae
+2020-03-19 15:50:24,994 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 69 is PENDING, UUID = 9e41c386-f953-4125-b7a9-99d40745db54
+2020-03-19 15:50:25,995 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 2 is PENDING, UUID = ddae8ae1-0ef8-4bd3-b20f-9006ded34243
+2020-03-19 15:50:26,998 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 50 is PENDING, UUID = 1f641f4d-145b-45cb-935f-3c941f5c2500
+2020-03-19 15:50:28,000 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 58 is PENDING, UUID = 71ca9930-1922-422c-9378-f3510b9f5325
+2020-03-19 15:50:29,002 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 71 is PENDING, UUID = f79b3dc5-143f-4550-b918-e81948e4b561
+2020-03-19 15:50:30,005 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 63 is PENDING, UUID = 285f1ee3-8946-452a-86e8-9349c7e66782
+2020-03-19 15:50:31,007 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 38 is PENDING, UUID = 136c7b1c-6cfa-4188-ac41-20f4d19684a1
+2020-03-19 15:50:32,008 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 35 is PENDING, UUID = 913c94c2-70e7-4224-8535-c44a0432b7b7
+2020-03-19 15:50:33,011 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 77 is PENDING, UUID = 53bdb56b-2195-4e29-b6df-7e2ed2c0ce91
+2020-03-19 15:50:34,014 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 49 is PENDING, UUID = 0eb2e317-ed5f-47ca-95d8-2afc37d324bd
+2020-03-19 15:50:35,015 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 21 is PENDING, UUID = f6e6ce22-fce7-4516-922d-867eb7365654
+2020-03-19 15:50:36,018 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 4 is PENDING, UUID = ee0f9ec5-bcb2-44b7-9b21-d3ae61346672
+2020-03-19 15:50:37,019 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 74 is PENDING, UUID = 9a7c19d8-67aa-4552-9737-5d21dc6a8cd1
+2020-03-19 15:50:38,022 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 25 is PENDING, UUID = a7573afe-743b-4d4e-b1c3-d8398bd828c9
+2020-03-19 15:50:39,024 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 15 is PENDING, UUID = 18f50845-d88c-4645-9811-02d4ac887e7e
+2020-03-19 15:50:40,027 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 64 is PENDING, UUID = 043921fa-82df-455a-b03c-76afef474082
+2020-03-19 15:50:41,030 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 45 is PENDING, UUID = 256218ee-75ad-4f85-9d94-78b8ab28d6cf
+2020-03-19 15:50:42,036 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 88 is PENDING, UUID = 0380f232-17d9-45ce-81c0-9191b410d8ae
+2020-03-19 15:50:43,039 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 48 is PENDING, UUID = 6c05970e-896e-4327-b344-6eea3bd820a4
+2020-03-19 15:50:44,041 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 83 is PENDING, UUID = 1e957351-2cb4-4622-8b34-b57d35a12927
+2020-03-19 15:50:45,044 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 7 is PENDING, UUID = b2ef82f8-5587-423f-8bae-98be71f328ce
+2020-03-19 15:50:46,046 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 82 is PENDING, UUID = b2c5b3fc-8273-4164-908e-ef20f6bc8b72
+2020-03-19 15:50:47,047 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 63 is PENDING, UUID = 07f37234-7992-4b66-a3a4-985aef5a98e5
+2020-03-19 15:50:48,050 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 20 is PENDING, UUID = 71a335b2-7438-4b53-aa6e-3da76eb05b67
+2020-03-19 15:50:49,052 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 4 is PENDING, UUID = f6ccda7f-0392-46c5-8c03-6cc74ecb8bb3
+2020-03-19 15:50:50,054 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 31 is PENDING, UUID = ce30bc0e-4034-415b-b6dd-837d2c58f177
+2020-03-19 15:50:51,056 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 69 is PENDING, UUID = 6f40b05c-1c0a-4fd8-82aa-90e997b22172
+2020-03-19 15:50:52,059 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 18 is PENDING, UUID = a56a38fd-d86e-439e-a1de-e042b076d73e
+2020-03-19 15:50:53,062 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 57 is PENDING, UUID = 241e465c-34b1-474c-b021-6085101a7501
+2020-03-19 15:50:54,065 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 35 is PENDING, UUID = f8c2d50f-298b-438c-944a-b18c6529c0a3
+2020-03-19 15:50:55,067 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 62 is PENDING, UUID = 697025f8-415f-4bf0-82fa-d11cb229fd59
+2020-03-19 15:50:56,069 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 27 is PENDING, UUID = 181c4bec-a877-4c2e-8e19-83c1ebbca52b
+2020-03-19 15:50:57,070 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 93 is PENDING, UUID = 62180ab0-1f8d-462a-b027-bec34fbac9a0
+2020-03-19 15:50:58,072 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 92 is PENDING, UUID = 3de6aee7-c810-4340-acbc-8098693091d8
+2020-03-19 15:50:59,074 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 37 is PENDING, UUID = 09ad5c41-06c6-43c7-97a2-acc3b04db0ab
+2020-03-19 15:51:00,076 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 83 is PENDING, UUID = 100b7d9b-c471-4073-9e66-f1c674573ad0
+2020-03-19 15:51:01,078 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 83 is PENDING, UUID = f94a769f-b7f4-4417-aea8-9092c6271437
+2020-03-19 15:51:02,081 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 49 is PENDING, UUID = 70fc3d4b-6e60-4322-84d9-ef25bac7fbfd
+2020-03-19 15:51:03,083 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 95 is PENDING, UUID = 8dc3f2d7-7cdc-4ccf-97fb-a2a10e230501
+2020-03-19 15:51:04,085 INFO c.d.k.KafkatestApplication [task-scheduler-5] Number 17 is PENDING, UUID = 1dc17b1a-9ee7-44ed-9092-9304b47dbb57
+2020-03-19 15:51:05,088 INFO c.d.k.KafkatestApplication [task-scheduler-4] Number 9 is PENDING, UUID = 804982da-d76d-4505-a23b-b4803850d63b
+2020-03-19 15:51:06,090 INFO c.d.k.KafkatestApplication [task-scheduler-4] Number 68 is PENDING, UUID = 1b7d4470-78c8-4b66-a9b2-7c398b22f8db
+2020-03-19 15:51:07,091 INFO c.d.k.KafkatestApplication [task-scheduler-4] Number 14 is PENDING, UUID = d0f9c5bf-3ec9-4e35-a3e3-b34e2392673d
+2020-03-19 15:51:08,092 INFO c.d.k.KafkatestApplication [task-scheduler-4] Number 21 is PENDING, UUID = 066de18e-9d47-4904-86d9-ac668ecca7ab
+2020-03-19 15:51:09,094 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 7 is PENDING, UUID = 71555959-d4ea-466c-a712-8ef1965cf28d
+2020-03-19 15:51:10,096 INFO c.d.k.KafkatestApplication [task-scheduler-1] Number 96 is PENDING, UUID = 2903cafb-abe4-46ef-bdb8-8d8c12c84e25
+2020-03-19 15:51:11,099 INFO c.d.k.KafkatestApplication [task-scheduler-6] Number 88 is PENDING, UUID = 843c7fd1-eefc-48de-b295-2034f121a256
+2020-03-19 15:51:12,102 INFO c.d.k.KafkatestApplication [task-scheduler-6] Number 80 is PENDING, UUID = 42e1387f-9c72-405a-99fd-b97e785128b2
+2020-03-19 15:51:13,104 INFO c.d.k.KafkatestApplication [task-scheduler-6] Number 69 is PENDING, UUID = 158a82c6-599a-4ec1-bc2e-b20513e5f096
+2020-03-19 15:51:14,106 INFO c.d.k.KafkatestApplication [task-scheduler-6] Number 8 is PENDING, UUID = d906d98c-4f21-4977-b03d-18a42008b1dd
+2020-03-19 15:51:15,109 INFO c.d.k.KafkatestApplication [task-scheduler-6] Number 55 is PENDING, UUID = b3a379d5-2539-43af-994f-18252c19becb
+2020-03-19 15:51:16,111 INFO c.d.k.KafkatestApplication [task-scheduler-3] Number 83 is PENDING, UUID = 87c26256-08d0-48ca-be16-e199b28b0107
