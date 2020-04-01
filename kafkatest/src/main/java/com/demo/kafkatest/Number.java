@@ -7,14 +7,11 @@ import java.util.Objects;
 public class Number {
     private int number;
     private String type, uuid;
-    public void setType(String type)
-    {
-        if (type.equals(NumType.ODD.name())||type.equals(NumType.EVEN.name())||type.equals(NumType.PENDING.name()))
-        {
+    public void setType(String type) {
+        if (type.equals(NumType.ODD.name())||type.equals(NumType.EVEN.name())||type.equals(NumType.PENDING.name())) {
             this.type = type;
         }
-        else
-        {
+        else {
             throw new IllegalArgumentException("Cannot set type to " + type);
         }
     }

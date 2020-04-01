@@ -19,7 +19,7 @@ public class KafkatestApplication {
 	public Supplier<Number> numberSupplier() {
 		return() -> {
 			RandomDataGenerator rdg = new RandomDataGenerator();
-			int num = rdg.nextInt(1, 100);
+			int num = rdg.nextInt(1, 2000);
 			Number number = new Number(UUID.randomUUID().toString(), num);
 			log.info("Number {} is {}, UUID = {}", number.getNumber(), number.getType(), number.getUuid());
 			return number;
