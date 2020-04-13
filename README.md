@@ -15,6 +15,8 @@ Make sure that the container is running and stable via Docker's dashboard.
 Next, launch the applications in the following order
 
 1.Kafkatest
+
 2.Numcheck
+
 3.Digitcheck
 
