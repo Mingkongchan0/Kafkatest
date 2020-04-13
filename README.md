@@ -20,3 +20,7 @@ Next, launch the applications in the following order
 
 3.Digitcheck
 
+## Consolidated view of the project
+
+![Project breakdown](project_breakdown.png)
+
